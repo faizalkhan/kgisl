@@ -1,0 +1,498 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<li class="nav-item dropdown user-menu">
+  <a
+    class="nav-link dropdown-toggle"
+    data-toggle="dropdown"
+    (click)="toggleDropdownMenu()"
+  >
+  
+  <i class="fas fa-cog"></i>
+  </a>
+  <ul #dropdownMenu class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+    <!-- User image -->
+  
+
+  <div class="card card-default feature-wrapper">
+    <div class="card-header mbtm15 mlft13 pdrt">
+      <h3 class="card-title feature-header">Feature </h3>
+
+      <div class="card-tools">
+        
+        <button type="button" id="close" (click)="close()" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
+
+        <button type="button" class="btn btn-tool" data-card-widget="remove">Details <i class="fas fa-angle-right"></i></button>
+      </div>
+    </div>
+    <!-- /.card-header -->    
+    <div class="card-body">
+      
+      <div class="row leftalign heatheadings">
+
+        <p class="col-md-12"> FRED -87 created by  <b>Eliza Smith</b> on jan 10 2020 </p>
+        <h2 class="col-md-12"> 
+          Heat Maps </h2>
+        <div class="col-md-3"> 
+         
+        
+          <select class="browser-default custom-select">
+         
+        
+            <option *ngFor="let option of options" [ngValue]="option.value">{{option.label}}</option>
+        
+          </select>
+         
+          
+        
+                  </div>
+                   
+                  
+                  <div class="col-md-6"> 
+        
+                  <div class="example-button-row">
+                    <div class="d-inline p-2 bg-primary text-white">Development Started</div>
+                 
+                  </div>
+                  </div>
+        
+                </div>
+      
+
+
+
+      
+      <div class="row">
+        <div class="col-md-6 borderrt" >
+
+        
+
+
+    
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <i class="fa fa-calendar" aria-hidden="true"></i> <small>Release</small> 
+                    </div> 
+                    </div>
+                     
+                    
+                    <div class="col-md-12"> 
+                      <div class="form-group">
+                    <label>FRIED  - IOS V4 25 <a [routerLink]="['/user/bob']"><i class='fas fa-external-link-alt'></i>
+</a>       </label>             </div>
+                    </div>
+          
+                  </div>
+
+
+
+
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <i class="fa fa-user" aria-hidden="true"></i>  <small> Assigned by</small> 
+                              </div> 
+                              </div>
+                               
+                              
+                              <div class="col-md-12"> 
+                                <div class="form-group">
+                              <label> Bryan MC Carly </label>
+                              </div>
+                              </div>
+                    
+                            </div>
+
+
+                            <div class="row">
+                              <div class="col-md-12">
+                                <div class="form-group">
+                                  <i class="fa fa-flag" aria-hidden="true"></i>    <small> Goals</small> 
+                                        </div> 
+                                        </div>
+                                         
+                                        
+                                        <div class="col-md-12"> 
+                                          <div class="form-group">
+                                            <mat-form-field class="example-chip-list">
+                                              <mat-chip-list #chipList aria-label="Fruit selection">
+                                                <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable"
+                                                         [removable]="removable" (removed)="remove(fruit)">
+                                                  {{fruit.name}}
+                                                  <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                                                </mat-chip>
+                                                <input placeholder=""
+                                                       [matChipInputFor]="chipList"
+                                                       [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                                                       [matChipInputAddOnBlur]="addOnBlur"
+                                                       (matChipInputTokenEnd)="add($event)">
+                                              </mat-chip-list>
+                                            </mat-form-field>
+                                        </div>
+                                        </div>
+                              
+                                      </div>
+          
+
+
+                                      <div class="row">
+                                        <div class="col-md-12">
+                                          <div class="form-group">
+                                            <i class="fa fa-users" aria-hidden="true"></i> <small>Intiative</small> 
+                                                  </div> 
+                                                  </div>
+                                                   
+                                                  
+                                                  <div class="col-md-12"> 
+                                                    <div class="form-group intiative-wrapper">
+                                                 <label>  <i class="fa fa-users" aria-hidden="true"></i>  Progress Tracking Dashboard</label> <i  class="fas fa-external-link-alt"></i>
+                                                  </div>
+                                                  </div>
+                                        
+                                                </div>
+
+
+
+                                                <div class="row">
+                                                  <div class="col-md-12">
+                                                    <div class="form-group">
+                                                      <i class="fas fa-map"></i>   <small> Epic</small> 
+                                                            </div> 
+                                                            </div>
+                                                             
+                                                            
+                                                            <div class="col-md-12"> 
+                                                              <div class="form-group">
+                                                                <label>   Fred - Enchanced route and location tracking </label> <i  class="fas fa-external-link-alt"></i>
+                                                            </div>
+                                                            </div>
+                                                  
+                                                          </div>
+
+
+
+                                                          <div class="row">
+                                                            <div class="col-md-6">
+                                                              <div class="form-group">
+                                                                <i class="fas fa-hourglass-start"></i>            <small> Start On</small> 
+
+
+                                                                      <mat-form-field appearance="fill">
+                                 
+                                                                        <input matInput [matDatepicker]="picker" [formControl]="date">
+                                                                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                                                        <mat-datepicker #picker></mat-datepicker>
+                                                                      </mat-form-field>
+                                                                      
+                                                                      
+                                                                      </div> 
+                                                                      </div>
+                                                                       
+                                                                      
+                                                                      <div class="col-md-6"> 
+                                                                        <div class="form-group">
+                                                                          <small> Due On </small>
+
+                                                                          <mat-form-field appearance="fill" showSelector=false>
+                                                                           
+                                                                            <input matInput [matDatepicker]="picker2" [formControl]="date">
+                                                                            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                                                                            <mat-datepicker #picker2></mat-datepicker>
+                                                                          </mat-form-field>
+                                                                      </div>
+                                                                      </div>
+                                                            
+                                                                    </div>
+
+
+                                                                    <div class="row">
+                                                                      <div class="col-md-6">
+                                                                        <div class="form-group Interaction-wrapper">
+                                                                          <i class="fa fa-bars" aria-hidden="true"></i>  <small> Interaction</small> 
+          
+          
+  <select class="browser-default custom-select">
+ 
+    <option *ngFor="let interaction of interaction" [ngValue]="interaction.value">{{interaction.label}}</option>
+
+  </select>
+                                                              
+                                                                               
+                                                                                </div> 
+                                                                                </div>
+                                                                                 
+                                                                                
+                                                                             
+                                                                      
+                                                                              </div>
+
+
+
+
+        
+        </div>
+        <!-- /.col -->
+        <div class="col-md-6">
+        
+         <div class="rightstatus-wrapper">
+
+          <div class="row">
+            <div class="col-md-12">
+          <div class="form-group progessmanual-wrapper">
+            <i class="fas fa-map"></i>   <small> Progress</small>  | <select class="browser-default custom-select">
+ 
+              <option *ngFor="let Progress of progress" [ngValue]="Progress.value">{{Progress.label}}</option>
+          
+            </select>
+
+            <ngb-progressbar type="success" [value]="65"></ngb-progressbar>  <label class="progress-label"> 67% completed </label>  
+                  </div> 
+
+
+</div>
+          </div>
+
+
+
+
+    
+                
+
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <i class="fas fa-tasks"></i>   <small> Type</small> 
+                                      </div> 
+                                      </div>
+                                       
+                                      
+                                      <div class="col-md-12"> 
+                                        <div class="form-group">
+                                          <label>  New </label>
+                                      </div>
+                                      </div>
+                            
+                                    </div>
+
+
+
+
+                                    <div class="row">
+                                      <div class="col-md-12">
+                                    <div class="form-group progessmanual-wrapper">
+                                      <i class="fas fa-eye"></i>  <small> Watchers </small>  | <select class="browser-default custom-select">
+                           
+                                        <option *ngFor="let notify of notifies" [ngValue]="notify.value">{{notify.label}}</option>
+                                    
+                                      </select>
+                          
+                                     
+                                            </div> 
+                          
+                          
+                          </div>
+
+
+
+
+
+                          <div class="col-md-12"> 
+                            <div class="form-group notifywatcher">
+                              <img *ngFor ="let userimage of userimages"   src="assets/img/{{userimage.userprofile}}"  alt="{{userimage.name}}"  class="img-size-50 img-circle mr-3"/>
+                          </div>
+                          </div>
+
+
+
+
+
+
+                                    </div>
+                          
+
+
+                          
+                  
+                                    <div class="row">
+                                      <div class="col-md-12">
+                                        <div class="form-group">
+                                          <i class="fas fa-star"></i>   <small> Aha Score</small> 
+                                                </div> 
+                                                </div>
+                                                 
+                                                
+                                                <div class="col-md-12"> 
+                                                  <div class="form-group">
+                                                    <label class="star">  19 </label>
+                                                </div>
+                                                </div>
+                                      
+                                              </div>
+
+
+                               
+                            <div class="row">
+                              <div class="col-md-12">
+                                <div class="form-group">
+                                  <i class="fa fa-tag" aria-hidden="true"></i>  <small> Tags</small> 
+                                        </div> 
+                                        </div>
+                                         
+                                        
+                                        <div class="col-md-12"> 
+                                          <div class="form-group">
+                                            <mat-form-field class="example-chip-list noborder goals-wrapper">
+                                              <mat-chip-list #chipList aria-label="tags selection">
+                                                <mat-chip *ngFor="let tag of tags" [selectable]="selectable"
+                                                 class="goals-display"         [removable]="removable" (removed)="removetag(tag)"> 
+                                                       
+                                                  {{tag.name}}
+                                                  <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                                                </mat-chip>
+                                              
+                                              </mat-chip-list>
+                                            </mat-form-field>
+                                        </div>
+                                        </div>
+                              
+                                      </div>
+
+
+                    
+                                      <div class="row">
+                                        <div class="col-md-12">
+                                      <div class="form-group progessmanual-wrapper remanining-wrapper">
+                                        <i class="fas fa-clock"></i>  <small> Remanining </small>  | <span>Logtime</span>
+                            
+                                       
+                                              </div> 
+                            
+                            
+                            </div>
+  
+  
+  
+  
+  
+                            <div class="col-md-12"> 
+                              <div class="form-group notifywatcher">
+                              5d
+                            </div>
+                            </div>
+  
+  
+  
+  
+  
+  
+                                      </div>
+                            
+
+
+                 
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+  
+      <div class="row">
+        <div class="col-12 col-sm-12">
+   <p>Please Provide heat maps to all-levels while anoyzing the data and selling it to cities for better city planning  </p>
+
+ 
+
+
+ 
+
+
+
+        </div>
+    
+      </div>
+      <!-- /.row -->
+
+
+      <div class="row">
+        <div class="col-12 col-sm-3">
+
+ 
+     <p class="createmockup"> Create a Mockup </p> 
+
+
+
+        </div>
+    
+        <div class="col-12 col-sm-6">
+
+ 
+
+
+          <div class="attach-wrapper">
+           <i class="fa fa-paperclip" aria-hidden="true"></i>
+         <div class="file btn btn-lg btn-primary">
+       Attach File          <input type="file" name="file"/>
+               </div>
+             </div>
+           
+       
+       
+       
+               </div>
+
+
+      </div>
+      <!-- /.row -->
+
+
+      <div class="row">
+        <div class="col-12 col-md-12 recordlinks-wrapper">
+
+ 
+     <h2><span> Record Links <i class="fas fa-plus-circle"></i></span></h2>
+<p> Belongs to initiative <i  aria-hidden="true" class="fa fa-users"></i> <a routeLink="">Progress tracking dashboard </a> </p>
+
+
+        </div>
+    
+    
+
+      </div>
+      <!-- /.row -->
+
+
+
+
+
+
+
+
+    </div>
+    <!-- /.card-body -->
+ 
+  </div>
+
+
+
+
+
+
+
+
+  </ul>
+</li>

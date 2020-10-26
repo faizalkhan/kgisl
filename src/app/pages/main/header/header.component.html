@@ -1,0 +1,133 @@
+<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+
+
+
+
+
+
+
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+
+  <li class="logo">Logo</li>
+
+  <li><i class="fa fa-home" aria-hidden="true"></i></li>
+
+  <li>
+  <div class="form-group">
+       <select class="form-control">
+      <option>Fredwin cycling</option>
+      </select>
+  </div>
+</li>
+
+
+  <li [ngbNavItem]="1">
+    <a ngbNavLink><i class="fa fa-info-circle" aria-hidden="true"></i>Info</a>
+    <ng-template ngbNavContent>
+      <div class="center">  <p>Info is under construction</p> </div>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="2">
+    <a ngbNavLink><i class="fa fa-bullseye"></i>Stagery</a>
+    <ng-template ngbNavContent>
+      <div class="center">  <p>Stagery is under construction</p>  </div>
+    </ng-template>
+  </li>
+
+  <li [ngbNavItem]="3">
+    <a ngbNavLink><i class="fa fa-calendar" aria-hidden="true"></i>Releases</a>
+    <ng-template ngbNavContent>
+      <div class="center">  <p>Releases is under construction</p>  </div>
+    </ng-template>
+  </li>
+
+  <li [ngbNavItem]="4">
+    <a ngbNavLink><i class="fa fa-cog" aria-hidden="true"></i>Ideas</a>
+    <ng-template ngbNavContent>
+      <div class="center"> <p>Ideas is under construction</p>  </div> 
+    </ng-template>
+  </li>
+
+
+  <li [ngbNavItem]="5">
+    <a ngbNavLink><i class="fa fa-th" aria-hidden="true"></i>Features</a>
+    <ng-template ngbNavContent>
+      <app-features></app-features>
+    </ng-template>
+  </li>
+
+
+  <li [ngbNavItem]="6">
+    <a ngbNavLink><i class="fa fa-align-left"></i> RoadMaps</a>
+    <ng-template ngbNavContent>
+     <div class="center"> <p>RoadMaps is under construction</p>   </div> 
+    </ng-template>
+  </li>
+
+
+</ul>
+
+
+<ul class="navbar-nav ml-auto">
+
+  <li class="nav-item">
+    <a
+      class="nav-link"
+      data-widget="control-sidebar"
+      data-slide="true"
+      href="#"
+      role="button"
+    >
+    <i class="fas fa-bell"></i>
+    </a>
+  </li>
+
+  <app-user-dropdown-menu></app-user-dropdown-menu>
+  <li class="nav-item">
+    <a
+      class="nav-link"
+      data-widget="control-sidebar"
+      data-slide="true"
+      href="#"
+      role="button"
+    >
+    <i class="fa fa-question-circle" aria-hidden="true"></i>
+    </a>
+  </li>
+
+
+
+
+  <li class="nav-item">
+    <a
+      class="nav-link"
+      data-widget="control-sidebar"
+      data-slide="true"
+      href="#"
+      role="button"
+    >
+    <i class="fa fa-search" aria-hidden="true"></i>
+    </a>
+  </li>
+
+  <li class="nav-item">
+    <a
+      class="nav-link"
+      data-widget="control-sidebar"
+      data-slide="true"
+      href="#"
+      role="button"
+    >
+    <i class="fas fa-plus"></i>
+    </a>
+  </li>
+ 
+
+
+  
+
+</ul>
+</nav>
+
+<div [ngbNavOutlet]="nav" class="mt-2"></div>
+
